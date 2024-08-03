@@ -1,3 +1,85 @@
-#content {
-  color: red;
+@font-face {
+  font-family: "Modern Antiqua";
+  src: url("./assets/ModernAntiqua-Regular.ttf");
 }
+
+:root {
+  --color1: #a34343;
+  --color2: #e9c874;
+  --color3: #FCFAEB;
+  --color4: #c0d6e8;
+  --text: #393832;
+  --shadow: 2px 2px 6px rgba(60, 0, 0, 0.1);
+}
+
+body {
+  background-color: var(--color3);
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  background-color: white;
+  color: var(--text);
+  font-family: "Modern Antiqua";
+  margin: auto;
+  width: 60ch;
+  padding: 2ch;
+  font-size: 1.5em;
+  line-height: 1.25;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--color3);
+  box-shadow: var(--shadow);
+  /* z-index and position are needed (?) for having the shadow of the header also in #content */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav {
+  width: 70ch;
+  margin: auto;
+  text-align: center;
+}
+
+button {
+  font-family: "Modern Antiqua";
+  background-color: var(--color1);
+  color: var(--color3);
+  font-weight: 400;
+  font-size: 1.2em;
+  border: none;
+  padding: 20px 40px;
+  margin: 0 10px;
+  border-radius: 10px;
+  &:hover {
+    cursor: pointer;
+    background-color: var(--color2);
+    color: var(--text);
+  }
+}
+
+
+.card {
+  height: 15ch;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  border: 1px solid var(--color4);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  &:hover {
+    background-color: var(--color3);
+  }
+}
+
